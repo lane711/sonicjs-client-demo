@@ -63,7 +63,7 @@ const UserList = () => {
                     // https://github.com/grid-js/gridjs/blob/master/src/storage/storage.ts#L21-L24
 
                     const end = Date.now();
-                    const clientExecutionTime = end - start;
+                    // const clientExecutionTime = end - start;
                     // $("#executionTime span.clientTime").text(
                     //   clientExecutionTime
                     // );
