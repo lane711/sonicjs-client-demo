@@ -95,7 +95,7 @@ const UserList = () => {
           },
         }}
       />
-      <div id="executionTime" class="p-4 text-center text-muted hide">
+      <div className="executionTime" class="p-4 text-center text-muted hide">
         Data Retrieval - <b>Server</b>: <span id="serverTime"></span>ms,{" "}
         <b>Client</b>: <span id="clientTime"></span>ms. <b>Source</b>:{" "}
         <span id="dataSource"></span>
