@@ -49,7 +49,7 @@ const UserList = () => {
             return new Promise((resolve, reject) => {
               // let's implement our own HTTP client
               const xhttp = new XMLHttpRequest();
-              // const start = Date.now();
+              const start = Date.now();
 
               xhttp.onreadystatechange = function () {
                 if (this.readyState === 4) {
@@ -63,8 +63,12 @@ const UserList = () => {
                     // make sure the output conforms to StorageResponse format:
                     // https://github.com/grid-js/gridjs/blob/master/src/storage/storage.ts#L21-L24
 
-                    // const end = Date.now();
-                    // const clientExecutionTime = end - start;
+                    const end = Date.now();
+                    const clientExecutionTime = end - start;
+                    console.log('clientExecutionTime', clientExecutionTime)
+                    let clientTime = document.getElementById("clientTime");
+                    clientTime.innerHTML = clientExecutionTime;
+
                     // $("#executionTime span.clientTime").text(
                     //   clientExecutionTime
                     // );
@@ -88,9 +92,9 @@ const UserList = () => {
         }}
       />
       <div id="executionTime" class="p-4 text-center text-muted hide">
-        Data Retrieval - <b>Server</b>: <span class="serverTime"></span>ms,{" "}
-        <b>Client</b>: <span class="clientTime"></span>ms. <b>Source</b>:{" "}
-        <span class="source"></span>
+        Data Retrieval - <b>Server</b>: <span id="serverTime"></span>ms,{" "}
+        <b>Client</b>: <span id="clientTime"></span>ms. <b>Source</b>:{" "}
+        <span id="source"></span>
       </div>
     </div>
   );
