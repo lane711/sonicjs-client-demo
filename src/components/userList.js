@@ -23,7 +23,6 @@ const UserList = () => {
   //   fetchData();
   // }, []);
 
-
   return (
     <div>
       <h2>Users:</h2>
@@ -65,10 +64,15 @@ const UserList = () => {
 
                     const end = Date.now();
                     const clientExecutionTime = end - start;
-                    console.log('clientExecutionTime', clientExecutionTime)
+                    console.log("clientExecutionTime", clientExecutionTime);
                     let clientTime = document.getElementById("clientTime");
                     clientTime.innerHTML = clientExecutionTime;
 
+                    let serverTime = document.getElementById("serverTime");
+                    serverTime.innerHTML = resp.executionTime;
+
+                    let dataSource = document.getElementById("dataSource");
+                    dataSource.innerHTML = resp.source;
                     // $("#executionTime span.clientTime").text(
                     //   clientExecutionTime
                     // );
@@ -94,7 +98,7 @@ const UserList = () => {
       <div id="executionTime" class="p-4 text-center text-muted hide">
         Data Retrieval - <b>Server</b>: <span id="serverTime"></span>ms,{" "}
         <b>Client</b>: <span id="clientTime"></span>ms. <b>Source</b>:{" "}
-        <span id="source"></span>
+        <span id="dataSource"></span>
       </div>
     </div>
   );
