@@ -35,6 +35,10 @@ const UserList = () => {
       <Grid
         columns={["FirstName", "LastName", "Email"]}
         search={true}
+        className={{
+          td: 'grid-table-td',
+          table: 'grid-table' 
+        }}
         pagination={{
           limit: 10,
           server: {
@@ -95,9 +99,9 @@ const UserList = () => {
           },
         }}
       />
-      <div className="executionTime" class="p-4 text-center text-muted hide">
-        Data Retrieval - <b>Server</b>: <span id="serverTime"></span>ms,{" "}
-        <b>Client</b>: <span id="clientTime"></span>ms. <b>Source</b>:{" "}
+      <div className="executionTime">
+        Data Retrieval | <b>Server</b>: <span id="serverTime"></span>ms |{" "}
+        <b>Client</b>: <span id="clientTime"></span>ms | <b>Source</b>:{" "}
         <span id="dataSource"></span>
       </div>
     </div>
