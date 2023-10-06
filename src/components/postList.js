@@ -17,7 +17,7 @@ const PostList = () => {
           name: "Title",
           formatter: (title) => html(`${title}`),
         },
-        "Author", "Comments", "Categories", "Body"]}
+        "Author", "Comments", "Category", "Body"]}
         search={true}
         className={{
           td: "grid-table-td",
@@ -65,7 +65,7 @@ const PostList = () => {
                         record.author,
                         record.commentCount,
                         record.category,
-                        record.body_preview + "...",
+                        record.body + "...",
                       ]),
                       total: resp.total,
                     });
