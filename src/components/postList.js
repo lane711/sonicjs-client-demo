@@ -2,10 +2,10 @@ import { Grid } from "gridjs-react";
 import { html } from "gridjs";
 
 
-const PostList = () => {
+const PostList = (props) => {
   console.log("process.env;", process.env);
 
-  const apiUrl = `${process.env.REACT_APP_API}/v1/example/blog-posts`;
+  const apiUrl = `${props.url}`;
 
   return (
     <div>
