@@ -1,11 +1,19 @@
-body,
-a {
+body {
   background-color: #282c34;
   color: #f9fafb;
 }
 
-a {
+a, a:visited, a.nav-link {
   color: #61dafb;
+}
+
+a:hover, a.nav-link:hover{
+  color: #9ae7fd;
+  ;
+}
+
+h1, h2{
+  margin: .7em 0 .5em;
 }
 
 .layout {
