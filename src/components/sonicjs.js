@@ -9,9 +9,9 @@ const SonicJs = () => {
         <a
           target="_blank"
           rel="noreferrer"
-          href="https://demo.sonicjs.com/admin"
+          href="https://demo.sonicjs.com"
         >
-          https://demo.sonicjs.com/admint
+          https://demo.sonicjs.com
         </a>.
       </p>
       <PostList url={process.env.REACT_APP_API_SONICJS} />
