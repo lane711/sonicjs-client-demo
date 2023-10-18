@@ -1,7 +1,6 @@
 import { Grid } from "gridjs-react";
 import { html } from "gridjs";
 
-
 const PostList = (props) => {
   console.log("process.env;", process.env);
 
@@ -13,11 +12,15 @@ const PostList = (props) => {
 
       <Grid
         columns={[
-        {
-          name: "Title",
-          formatter: (title) => html(`${title}`),
-        },
-        "Author", "Comments", "Category", "Body"]}
+          {
+            name: "Title",
+            formatter: (title) => html(`${title}`),
+          },
+          { name: "Author", width: "230px" },
+          { name: "Comments", width: "60px" },
+          { name: "Category", width: "180px" },
+          { name: "Body", width: "200px" },
+        ]}
         search={true}
         className={{
           td: "grid-table-td",
